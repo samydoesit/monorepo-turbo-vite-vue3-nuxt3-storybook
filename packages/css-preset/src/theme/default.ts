@@ -1,6 +1,6 @@
-import { mergeDeep } from 'unocss'
-import { theme as windTheme } from '@unocss/preset-wind'
 import type { Theme } from './types'
+import { theme as windTheme } from '@unocss/preset-wind'
+import { mergeDeep } from 'unocss'
 import { colors } from './colors'
 import { fontFamily, fontSize, lineHeight } from './font'
 

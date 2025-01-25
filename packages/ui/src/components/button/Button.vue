@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import IconSpinner from '@ui/components/icon/Spinner.vue'
 import type { ButtonIconSize, ButtonType } from './Button.model'
+import IconSpinner from '@ui/components/icon/Spinner.vue'
 import { ButtonIconSizes, ButtonTypes } from './Button.model'
 
 withDefaults(defineProps<{
