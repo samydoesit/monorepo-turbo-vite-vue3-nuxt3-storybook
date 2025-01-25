@@ -1,7 +1,7 @@
 import process from 'node:process'
+import colors from 'picocolors'
 import prompts from 'prompts'
 import { valid } from 'semver'
-import colors from 'picocolors'
 import {
   args,
   getPackageInfo,

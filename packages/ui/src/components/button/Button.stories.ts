@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { action } from '@storybook/addon-actions'
 import IconCamera from '../icon/Camera.vue'
-import Button from './Button.vue'
 import { ButtonIconSizes, ButtonTypes } from './Button.model'
+import Button from './Button.vue'
 
 const meta = {
   component: Button,

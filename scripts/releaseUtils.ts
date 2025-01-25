@@ -1,15 +1,15 @@
+import type { Options as ExecaOptions, ResultPromise } from 'execa'
+import type { ReleaseType } from 'semver'
 /**
  * modified from https://github.com/vuejs/core/blob/master/scripts/release.js
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
-import colors from 'picocolors'
-import type { ReleaseType } from 'semver'
-import { inc as semverInc } from 'semver'
-import minimist from 'minimist'
-import type { Options as ExecaOptions, ResultPromise } from 'execa'
 import { execa } from 'execa'
+import minimist from 'minimist'
+import colors from 'picocolors'
+import { inc as semverInc } from 'semver'
 
 export const args = minimist(process.argv.slice(2))
 
@@ -166,9 +166,7 @@ export async function publishPackage(
 }
 
 export async function getLatestTag(pkgName: string) {
-  const tags = (await run('git', ['tag'], { stdio: 'pipe' })).stdout
-    .split(/\n/)
-    .filter(Boolean)
+  const tags = (await run('git', ['tag'], { stdio: 'pipe' })).stdout.split(/\n/).filter(Boolean)
   const prefix = pkgName === 'vite' ? 'v' : `${pkgName}@`
   return tags
     .filter(tag => tag.startsWith(prefix))

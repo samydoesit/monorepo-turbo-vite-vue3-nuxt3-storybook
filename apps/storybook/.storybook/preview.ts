@@ -1,6 +1,6 @@
-import { setup } from '@storybook/vue3'
-import * as jest from '@storybook/jest'
 import { action } from '@storybook/addon-actions'
+import * as jest from '@storybook/jest'
+import { setup } from '@storybook/vue3'
 
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
